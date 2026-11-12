@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VR Live Commuter Traffic | Digitraffic API</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <script src="scrript.js"></script>
+
+    <header class="app-header">
+        <div class="container header-content">
+            <div class="logo-area">
+                <span class="badge">LIVE</span>
+                <h1>VR Commuter &amp; Train Schedules</h1>
+            </div>
+            <p class="subtitle">Real-time Finnish railway data powered by Fintraffic Digitraffic API</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <!--Search and filter controls-->
+        <section class="controls-card" aria-label="Search Controls">
+            <div class="control-group">
+                <label for="station-select">Select Train Station</label>
+                <select id="station-select">
+                    <option value="">Loading stations...</option>
+                </select>
+            </div>
+
+            <div class="control-group">
+                <label for="custom-search">Custom Filter (Train #, Type, or Station)</label>
+                <input 
+                    type="text" 
+                    id="custom-search" 
+                    placeholder="e.g. IC 23, P, Tampere, HKI..." 
+                    autocomplete="off"
+                >
+            </div>
+
+            <div class="control-group button-group">
+                <button id="refresh-btn" type="button" title="Fetch latest live data">
+                    &#x21bb; Refresh Data
+                </button>
+            </div>
+        </section>
+
+        <!--Status and summary Bar-->
+        <section class="status-bar">
+            <div id="status-message" class="status-text">Initializing application...</div>
+            <div id="result-count" class="count-badge">0 trains</div>
+        </section>
+
+        <!--Timetable results-->
+        <section class="table-container">
+            <table id="timetable">
+                <thead>
+                    <tr>
+                        <th>Train</th>
+                        <th>Category</th>
+                        <th>Route (Origin &rarr; Destination)</th>
+                        <th>Scheduled Time</th>
+                        <th>Live Estimate</th>
+                        <th>Track</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody id="timetable-body">
+                    <!--Rows will be populated dynamically via script.js-->
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <footer class="app-footer">
+        <div class="container">
+            <p>Data source: <a href="https://www.digitraffic.fi/rautatieliikenne/" target="_blank" rel="noopener">Fintraffic / Digitraffic.fi</a> (CC 4.0 BY)</p>
+        </div>
+    </footer>
+
+</body>
+</html>
