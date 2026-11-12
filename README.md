@@ -20,7 +20,7 @@ Idea for this project was to make a site where you can see live timings of incom
 
 ## Web links
 
-- **Published application:** [Add your GitHub Pages URL here](https://yourusername.github.io/your-repository/)
+- **Published application:** [Add your GitHub Pages URL here](https://jezzze.github.io/AJAX-application/)
 - **GitHub repository:** [Add your repository URL here](https://github.com/jezzze/AJAX-application)
 
 
